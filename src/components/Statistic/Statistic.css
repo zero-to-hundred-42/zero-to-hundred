@@ -1,0 +1,9 @@
+.ui.statistic>.label, .ui.statistics .statistic>.label {
+	color:rgb(221,59,51)
+}
+.ui.horizontal.statistic>.value, .ui.horizontal.statistics .statistic>.value {
+	vertical-align: middle;
+}
+.StatisticGroup{
+	align-content: center;
+}

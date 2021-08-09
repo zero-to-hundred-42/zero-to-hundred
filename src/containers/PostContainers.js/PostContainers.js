@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import { PostWrapper, Navigate, Post } from '../../components';
+import { Card } from 'semantic-ui-react'
+import { PostWrapper, Navigate, Post, StatisticData} from '../../components';
 import * as service from '../../services/post';
 
 class PostContainer extends Component{
-
 	constructor(props) {
 		super();
 		this.state = {
-			postId: 1,
 			fetching: false,
 			post: {
-				TotalCase: null,
-				data:null
+				data:null,
+				dataNew:null
 			}
 		};
 	}
@@ -27,35 +26,42 @@ class PostContainer extends Component{
 		// console.log(comments);
 		const info = await Promise.all([
 			service.getPost(),
+			service.getPostNew(),
 		]);
-		const {TotalCase, TotalDeath} = info[0].data;
 		let data = info[0].data;
+		let dataNew = info[1].data;
 		this.setState({
-			postId,
 			post: {
-				TotalCase,
 				data,
-				TotalDeath
+				dataNew
 			},
 			fetching: false
 		});
-		console.log(data);
 	}
 
 	render() {
-		const {postId, fetching, post} = this.state;
+		const {fetching, post} = this.state;
 
 		return (
 			<PostWrapper>
 				<Navigate
-					postId={postId}
 					disabled={fetching}
 				/>
 				<Post
-					TotalCase={post.TotalCase}
 					data={post.data}
-					TotalDeath={post.TotalDeath}
+					dataNew={post.dataNew}
 				/>
+				<Card>
+					<Card.Content>
+						<Card.Header>국내 코로나 확진현황</Card.Header>
+					</Card.Content>
+					<Card.Content>
+						<StatisticData
+							data={post.data}
+							dataNew={post.dataNew}
+						/>
+					</Card.Content>
+				</Card>
 			</PostWrapper>
 		);
 	}

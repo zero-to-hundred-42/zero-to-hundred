@@ -7,9 +7,14 @@
 }
 
 .Post h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .Post p {
     font-size: 2rem;   
+}
+
+.redfont {
+    color: red;
 }
