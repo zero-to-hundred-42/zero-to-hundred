@@ -10,10 +10,9 @@ class PostContainer extends Component{
 			postId: 1,
 			fetching: false,
 			post: {
-				title: null,
-				body: null
-			},
-			comments: []
+				TotalCase: null,
+				data:null
+			}
 		};
 	}
 
@@ -27,24 +26,24 @@ class PostContainer extends Component{
 		// const comments = await service.getComments(postId);
 		// console.log(comments);
 		const info = await Promise.all([
-			service.getPost(postId),
-			service.getComments(postId)
+			service.getPost(),
 		]);
-		const {title, body} = info[0].data;
-		const comments = info[1].data;
+		const {TotalCase, TotalDeath} = info[0].data;
+		let data = info[0].data;
 		this.setState({
 			postId,
 			post: {
-				title,
-				body
+				TotalCase,
+				data,
+				TotalDeath
 			},
-			comments,
 			fetching: false
 		});
+		console.log(data);
 	}
 
 	render() {
-		const {postId, fetching, post, comments} = this.state;
+		const {postId, fetching, post} = this.state;
 
 		return (
 			<PostWrapper>
@@ -53,9 +52,9 @@ class PostContainer extends Component{
 					disabled={fetching}
 				/>
 				<Post
-					title={post.title}
-					body={post.body}
-					comments={comments}
+					TotalCase={post.TotalCase}
+					data={post.data}
+					TotalDeath={post.TotalDeath}
 				/>
 			</PostWrapper>
 		);

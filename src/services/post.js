@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-export function getPost(postId) {
-	return axios.get(`https://jsonplaceholder.typicode.com/posts/` + postId);
-}
-
-export function getComments(postId) {
-	return axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+export function getPost() {
+	const serviceKey = "EwASIYoegy8BFcuqV1HMC2T7Gk3f5OldW";
+	// return axios.get(`https://cors-anywhere.herokuapp.com/http://api.corona-19.kr/korea?serviceKey=` + serviceKey);
+	return axios.get(`https://api.corona-19.kr/korea/?serviceKey=` + serviceKey);
 }
