@@ -39,7 +39,7 @@ class PostContainer extends Component{
 	}
 
 	render() {
-		const {fetching, post} = this.state;
+		const {post} = this.state;
 
 		return (
 			<PostWrapper>
