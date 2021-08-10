@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { Card } from 'semantic-ui-react'
-import { PostWrapper, Navigate, Post, StatisticData} from '../../components';
+import { PostWrapper, Navigate, Post, CardGroup} from '../../components';
 import * as service from '../../services/post';
 
 class PostContainer extends Component{
@@ -51,17 +50,10 @@ class PostContainer extends Component{
 					data={post.data}
 					dataNew={post.dataNew}
 				/>
-				<Card>
-					<Card.Content>
-						<Card.Header>국내 코로나 확진현황</Card.Header>
-					</Card.Content>
-					<Card.Content>
-						<StatisticData
-							data={post.data}
-							dataNew={post.dataNew}
-						/>
-					</Card.Content>
-				</Card>
+				<CardGroup
+					data={post.data}
+					dataNew={post.dataNew}
+				/>
 			</PostWrapper>
 		);
 	}

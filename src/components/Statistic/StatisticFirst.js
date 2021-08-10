@@ -4,7 +4,7 @@ import './Statistic.css'
 
 const StatisticData = ({data, dataNew}) => (
     <div className="StatisticGroup">
-        <Statistic size='large' color='red'>
+        <Statistic color='red'>
           <Statistic.Value>
             <Icon name='users'/>{data?.TotalCase} {console.log(data)} {console.log(dataNew)}
           </Statistic.Value>
@@ -12,7 +12,7 @@ const StatisticData = ({data, dataNew}) => (
         <p style={{textAlign:"center"}}>
         <Statistic horizontal size='small' color='red'>
           <Statistic.Value>
-            <Icon name="plus circle"/>{dataNew?.korea.newCase}</Statistic.Value>
+            <Icon name="angle up"/>{dataNew?.korea.newCase}</Statistic.Value>
           <Statistic.Label><Icon name='home' />{dataNew?.korea.newCcase}<br/><Icon name='plane'/>{dataNew?.korea.newFcase}</Statistic.Label>
         </Statistic>
         </p>
