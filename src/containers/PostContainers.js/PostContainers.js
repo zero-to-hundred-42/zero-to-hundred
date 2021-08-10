@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { PostWrapper, Navigate, Post, CardGroup} from '../../components';
+import { PostWrapper, CardGroup} from '../../components';
 import * as service from '../../services/post';
 
 class PostContainer extends Component{
