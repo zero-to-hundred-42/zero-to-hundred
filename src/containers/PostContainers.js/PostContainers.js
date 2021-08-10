@@ -43,13 +43,13 @@ class PostContainer extends Component{
 
 		return (
 			<PostWrapper>
-				<Navigate
+				{/* <Navigate
 					disabled={fetching}
 				/>
 				<Post
 					data={post.data}
 					dataNew={post.dataNew}
-				/>
+				/> */}
 				<CardGroup
 					data={post.data}
 					dataNew={post.dataNew}
