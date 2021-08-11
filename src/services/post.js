@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const serviceKey = process.env.REACT_APP_SERVICE_KEY;
-// const serviceKey = "EwASIYoegy8BFcuqV1HMC2T7Gk3f5OldW"
+const serviceKey = process.env.SERVICE_KEY;
 
 export function getPost() {
 	return axios.get(`https://api.corona-19.kr/korea/?serviceKey=` + serviceKey);
