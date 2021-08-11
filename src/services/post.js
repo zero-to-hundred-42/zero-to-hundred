@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const serviceKey = process.env.SERVICE_KEY;
+serviceKey = "EwASIYoegy8BFcuqV1HMC2T7Gk3f5OldW";
 
 export function getPost() {
-	console.log(process.env.SERVICE_KEY);
-	console.log(process.env.SK);
 	return axios.get(`https://api.corona-19.kr/korea/?serviceKey=` + serviceKey);
 }
 
