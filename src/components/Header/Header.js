@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => (
 	<div className="Header">
-		POSTS
+		코로나 OUT
 	</div>
 )
 

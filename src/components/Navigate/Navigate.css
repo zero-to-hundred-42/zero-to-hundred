@@ -1,5 +1,6 @@
 .Navigate {
-    position: relative;
+    /* position: relative; */
+    display:block;
 }
 
 .ui.button.Navigate-right-button {
