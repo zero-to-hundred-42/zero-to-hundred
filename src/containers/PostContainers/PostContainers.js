@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { PostWrapper, CardGroup} from '../../components';
 import * as service from '../../services/post';
+import ChatTemplate from "./api_components/ChatTemplate";
 
 class PostContainer extends Component{
 	constructor(props) {
@@ -47,6 +48,9 @@ class PostContainer extends Component{
 					data={post.data}
 					dataNew={post.dataNew}
 				/>
+				  <div>
+    				<ChatTemplate/>
+  				</div>
 			</PostWrapper>
 		);
 	}
