@@ -19,17 +19,17 @@ function Navigate ({ location, history }) {
 	<div className="Navigate">
 		<div class="ui vertical pointing menu">
       <Link to='/'>
-        <a class={home}>
+        <a class={home} href="#!">
           Home
         </a>
       </Link>
       <Link to='/Board'>
-        <a class={board}>
+        <a class={board} href="#!">
           Board
         </a>
       </Link>
       <Link to='/about'>
-        <a class={about}>
+        <a class={about} href="#!">
           About
         </a>
       </Link>
