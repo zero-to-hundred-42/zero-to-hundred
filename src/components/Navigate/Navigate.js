@@ -23,7 +23,7 @@ function Navigate ({ location, history }) {
           Home
         </a>
       </Link>
-      <Link to='/Board'>
+      <Link to='/board'>
         <a class={board} href="#!">
           Board
         </a>
