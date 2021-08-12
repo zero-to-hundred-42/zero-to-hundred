@@ -12,3 +12,37 @@
     float: right;
     margin: 0px;
 }
+.navbar_toggleBtn{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .Navigate.active{
+        align-items: flex-start;
+        width: 100%;
+        display: flex;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .Navigate{
+        display: none;
+        transition: 850ms;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0px;
+        text-align: center;
+        display: flex;
+    }
+    .ui.vertical.menu{
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display:block;
+        text-align: right;
+        position: absolute;
+        right: 13px;
+        top: 65px;
+    }
+}
