@@ -2,8 +2,8 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => (
-	<div className="Header">
-		코로나 OUT
+	<div className="Header" onClick="Home">
+		코로나OUT
 	</div>
 )
 

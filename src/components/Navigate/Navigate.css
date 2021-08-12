@@ -1,16 +1,14 @@
 .Navigate {
     /* position: relative; */
     display:block;
+    float: left;
+    margin-left: 5%;
+    margin-top: 3%;
 }
-
+.active-item {
+    border-color: rgb(50,120,205);
+}
 .ui.button.Navigate-right-button {
     float: right;
     margin: 0px;
-}
-
-.Navigate-page-num {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
