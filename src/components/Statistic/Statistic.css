@@ -7,3 +7,24 @@
 .StatisticGroup{
 	text-align: center;
 }
+
+@media screen and (max-width:1200px) {
+	.ui.statistic>.value, .ui.statistics .statistic>.value{
+		font-size: 3rem !important;
+	}	
+	.ui.small.horizontal.statistic>.value, .ui.small.horizontal.statistics .statistic>.value{
+		font-size: 1.5rem !important;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.ui.statistic>.value, .ui.statistics .statistic>.value{
+		font-size: 2rem !important;
+	}	
+	.ui.small.horizontal.statistic>.value, .ui.small.horizontal.statistics .statistic>.value{
+		font-size: 1rem !important;
+	}
+	.ui.statistic>.label, .ui.statistics .statistic>.label{
+		font-size: 0.7rem !important;
+	}
+}

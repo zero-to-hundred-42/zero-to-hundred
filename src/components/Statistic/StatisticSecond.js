@@ -6,7 +6,7 @@ const StatisticData = ({data, dataNew}) => (
     <div className="StatisticGroup">
         <Statistic color='green'>
           <Statistic.Value>
-            <Icon name='plus square'/>{data?.TotalRecovered}
+            <Icon name='plus square'/><br/>{data?.TotalRecovered}
           </Statistic.Value>
         </Statistic>
         <p style={{textAlign:"center"}}>
