@@ -25,7 +25,6 @@ function MsgContent({ data }) {
 
 export default function ChatTemplate() {
 
-	const [location_res, setLocation] = useState({ "num": "0", "name": "hello" });
 	const [loca_cont, setLocacont] = useState(<tr><td>안녕하세요</td></tr>)
 	const [data, setData] = useState([
 		{
@@ -53,7 +52,7 @@ export default function ChatTemplate() {
 	** tbody 안의 {loca_cont} 에 들어갈 태그들을 담는 함수입니다.
 	*/
 	function see_list(data) {
-		console.log("thisisseelist");
+		console.log("this_is_see_list");
 		console.log(data);
 		const result = data.map(
 			(value) => {
@@ -87,7 +86,7 @@ export default function ChatTemplate() {
 			});
 			console.log("res :");
 			console.log(result);
-			if (e.target.value == "")
+			if (e.target.value === "")
 			{
 				console.log("내용 없음");
 				setLocacont(<tr><td>안녕하세요</td></tr>);
@@ -95,12 +94,11 @@ export default function ChatTemplate() {
 			else if (result === undefined)
 			{
 				console.log("잘못된 내용");
-				setLocation({ num: "0", name: "없는 이름입니다." });
+				setLocacont(<tr><td>없는 지역입니다.</td></tr>);
 			}
 			else
 			{
 				console.log("내용 있음");
-				setLocation(result);
 				see_list(result);
 			}
 		});
