@@ -40,14 +40,16 @@ export default function ChatTemplate() {
 
 	/*
 	** Get_API 함수는 API정보를 땡겨서 db의 data.json에 정보를 넣어줌니다. 15초 단위로 setInterval 합니다
-	*/
+
 
 	let num = 1;
 	setInterval(()=> {
 		Get_API(num);
 		num += 1;
 	},1500);
+	*/
 
+	
 	/*
 	** tbody 안의 {loca_cont} 에 들어갈 태그들을 담는 함수입니다.
 	*/
