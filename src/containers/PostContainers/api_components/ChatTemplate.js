@@ -5,14 +5,15 @@ import Get_API  from "./Get_API"
 ** ChatTemplate의 return 에서 MsgContent 태그에 들어갈 내용들 담는 컨포넌트 입니다.
 */
 function MsgContent({ data }) {
-	const result = data.map((value) => {
-		return (
-			<tr key={value.md101_sn}>
-				<td>{value.location_id}</td>
-				<td>{value.location_name}</td>
-				<td>{value.msg}</td>
-			</tr>
-		);
+	const result = data.map(
+		(value) => {
+			return (
+				<tr key={value.md101_sn}>
+					<td>{value.location_id}</td>
+					<td>{value.location_name}</td>
+					<td>{value.msg}</td>
+				</tr>
+			);
 	});
 
 	return (
@@ -40,14 +41,13 @@ export default function ChatTemplate() {
 
 	/*
 	** Get_API 함수는 API정보를 땡겨서 db의 data.json에 정보를 넣어줌니다. 15초 단위로 setInterval 합니다
-
+	*/
 
 	let num = 1;
 	setInterval(()=> {
 		Get_API(num);
 		num += 1;
 	},1500);
-	*/
 
 	
 	/*
@@ -85,6 +85,7 @@ export default function ChatTemplate() {
 			const result = data.filter((odata) => {
 				if (odata.name.indexOf(search_this) > -1)
 					return odata.name;
+				return 0;
 			});
 			console.log("res :");
 			console.log(result);

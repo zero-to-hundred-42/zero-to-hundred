@@ -11,7 +11,7 @@ export default async function Get_API(num) {
 	}
 
 	function send_Data(row) {
-		row.map((data) => {
+		row.forEach((data) => {
 			is_in_data(data.md101_sn).then((res) => {
 				if (res === 0) {
 					fetch(`http://localhost:3001/data`, {
@@ -29,9 +29,11 @@ export default async function Get_API(num) {
 			});
 		});
 	}
+
 	const service_key =
 		"SzNMfAEtQVOJgAxR%2BOZVYREQ6aHzQhlkPkuQFy9hNmrR07Lwe5%2BB6YTy7u7a4jAsyD2xQJ9UQAqAg0xjnok3BA%3D%3D";
 	const complete_url = `http://apis.data.go.kr/1741000/DisasterMsg3/getDisasterMsg1List?ServiceKey=${service_key}&pageNo=${num}&numOfRows=10&type=json`;
+
 	fetch(complete_url)
 		.then((res) => {
 			if (res.ok) return res.json();
