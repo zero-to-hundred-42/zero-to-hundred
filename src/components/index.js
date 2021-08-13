@@ -11,6 +11,7 @@ import CardFirst from './Card/CardFirst';
 import CardSecond from './Card/CardSecond';
 import CardThird from './Card/CardThird';
 import CardGroup from './CardGroup/CardGroup';
+import Items from './Items/Items';
 export {
     Header,
     PostWrapper,
@@ -22,5 +23,6 @@ export {
     CardFirst,
     CardSecond,
     CardThird,
-    CardGroup
+    CardGroup,
+    Items
 };
