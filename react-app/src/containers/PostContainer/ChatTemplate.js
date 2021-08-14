@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import ex_data from "../db/data.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'semantic-ui-css/semantic.min.css';
+import { Button, Card} from 'react-bootstrap';
+import { Input, Comment, Header } from 'semantic-ui-react'
 
 /*
 ** ChatTemplate의 return 에서 MsgContent 태그에 들어갈 내용들 담는 컨포넌트 입니다.
@@ -8,18 +12,22 @@ function MsgContent({ data }) {
 	const result = data.map(
 		(value) => {
 			return (
-				<tr key={value.md101_sn}>
-					<td>{value.location_id}</td>
-					<td>{value.location_name}</td>
-					<td>{value.msg}</td>
-				</tr>
+				<Comment key={value.md101_sn} style={{marginBottom : "2em"}}>
+					<Comment.Content>
+						<Comment.Author>{value.create_date}</Comment.Author>
+						<Comment.Text>{value.msg}</Comment.Text>
+					</Comment.Content>
+				</Comment>
 			);
 	});
 
 	return (
-		<tbody>
+		<Comment.Group size='large'>
+			<Header as='h3' dividing>
+				{data[0].location_name}
+			</Header>
 			{result}
-		</tbody>
+		</Comment.Group>
 	);
 }
 
@@ -79,13 +87,13 @@ console.log(uniqueArr);
 
 		const result = ex_data.location.map(
 			(value) => {
-				return (<tr key={value.num}>
-					<td>
-						<button onClick={onClick} value={value.name}>
-							{value.name}
-						</button>
-					</td>
-				</tr>)
+				return (
+						<div key={value.num} className="d-grid gap-2">
+							<Button variant="outline-secondary" size="sm" onClick={onClick} value={value.name}>
+								{value.name}
+							</Button>{' '}
+						</div>
+				)
 		});
 		return result
 	}
@@ -93,13 +101,13 @@ console.log(uniqueArr);
 	function see_list(data) {
 		const result = data.map(
 			(value) => {
-				return (<tr key={value.num}>
-					<td>
-						<button onClick={onClick} value={value.name}>
+				return (
+					<div key={value.num} className="d-grid gap-2">
+						<Button variant="outline-secondary" size="sm" onClick={onClick} value={value.name}>
 							{value.name}
-						</button>
-					</td>
-				</tr>)
+						</Button>{' '}
+					</div>
+				)
 		});
 		setLocacont(result);
 	}
@@ -162,30 +170,13 @@ console.log(uniqueArr);
 	}
 
 	return (
-		<div
-            style={{
-            display : "grid",
-            gridTemplateColumns : "1fr 1fr"
-        }}>
-			<div className="left">
-				<table>
-					<thead>
-						<tr>
-							<th>
-								<input type="text" onChange={find_Location} />
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{loca_cont}
-					</tbody>
-				</table>
+		<div  style={{backgroundColor : "white", padding : "1.5em", border: "1px outset #d4d4d5",	borderRadius : "10px", display : "flex", marginTop : "20px"}}>
+			<div style={{marginRight : "5%"}}>
+				<Input type="text" onChange={find_Location} style={{height : "2em", marginBottom : "20px"}}/>
+				{loca_cont}
 			</div>
-
-			<div className="right">
-				<table>
+			<div style={{borderLeft:"1px outset #d4d4d5", padding : "2em"}}>
 					<MsgContent data={data}/>
-				</table>
 			</div>
 		</div>
 	);
