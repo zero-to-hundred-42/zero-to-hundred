@@ -91,8 +91,6 @@ console.log(uniqueArr);
 	}
 
 	function see_list(data) {
-		console.log("this_is_see_list");
-		console.log(data);
 		const result = data.map(
 			(value) => {
 				return (<tr key={value.num}>
@@ -148,21 +146,16 @@ console.log(uniqueArr);
 					return odata.name;
 				return 0;
 			});
-			console.log("res :");
-			console.log(result);
 			if (e.target.value === "")
 			{
-				console.log("내용 없음");
 				see_list(ex_data.location);
 			}
 			else if (result === undefined)
 			{
-				console.log("잘못된 내용");
 				setLocacont(<tr><td>없는 지역입니다.</td></tr>);
 			}
 			else
 			{
-				console.log("내용 있음");
 				see_list(result);
 			}
 
