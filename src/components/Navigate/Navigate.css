@@ -4,6 +4,7 @@
     float: left;
     margin-left: 5%;
     margin-top: 3%;
+    flex-direction: row;
 }
 .active-item {
     border-color: rgb(50,120,205);
