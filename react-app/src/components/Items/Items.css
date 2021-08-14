@@ -1,0 +1,14 @@
+
+.Item {
+	max-width: 35rem;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+@media screen and (max-width:768px) {
+	.Item {
+		max-width: 30rem;
+		margin: 0 auto;
+		padding-top: 10rem;
+	}
+}
