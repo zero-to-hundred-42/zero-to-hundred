@@ -2,7 +2,7 @@
 	margin-left: 270px;
 	margin-right: 50px;
 }
-.content {
+.card .content {
 	margin: 40px;
 }
 
@@ -10,7 +10,7 @@
 	.about {
 		margin-left: 50px;
 	}
-	.content {
+	.card .content {
 		margin-top: 50px;
 	}
 }
