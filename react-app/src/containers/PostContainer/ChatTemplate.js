@@ -9,8 +9,12 @@ import { Input, Comment, Header } from 'semantic-ui-react'
 ** ChatTemplate의 return 에서 MsgContent 태그에 들어갈 내용들 담는 컨포넌트 입니다.
 */
 function MsgContent({ data }) {
+	let i = 0;
 	const result = data.map(
 		(value) => {
+			if (i > 20)
+				return ;
+			i++;
 			return (
 				<Comment key={value.md101_sn} style={{marginBottom : "2em"}}>
 					<Comment.Content>
@@ -85,8 +89,12 @@ console.log(uniqueArr);
 			setData(result);
 		}
 
+		let i = 0;
 		const result = ex_data.location.map(
 			(value) => {
+				if (i > 20)
+					return ;
+				i++;
 				return (
 						<div key={value.num} className="d-grid gap-2">
 							<Button variant="outline-secondary" size="sm" onClick={onClick} value={value.name}>
@@ -170,12 +178,18 @@ console.log(uniqueArr);
 	}
 
 	return (
-		<div  style={{backgroundColor : "white", padding : "1.5em", border: "1px outset #d4d4d5",	borderRadius : "10px", display : "flex", marginTop : "20px"}}>
-			<div style={{marginRight : "5%"}}>
-				<Input type="text" onChange={find_Location} style={{height : "2em", marginBottom : "20px"}}/>
+		<div  style={{
+			backgroundColor : "white",
+			border: "1px outset #d4d4d5",
+			borderRadius : "10px",
+			display : "flex",
+			margin : "20px 0 20px 0"
+			}}>
+			<div style={{padding : "0 1.5em 1.5em 1.5em", marginTop : "1.5em"}}>
+				<Input type="tet"x onChange={find_Location} style={{height : "2em", marginBottom : "20px"}}/>
 				{loca_cont}
 			</div>
-			<div style={{borderLeft:"1px outset #d4d4d5", padding : "2em"}}>
+			<div style={{borderLeft:"1px outset #d4d4d5", padding : "0 1.5em 1.5em 1.5em", marginTop : "1.5em"}}>
 					<MsgContent data={data}/>
 			</div>
 		</div>
