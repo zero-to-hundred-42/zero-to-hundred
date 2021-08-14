@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CardGroup, PostWrapper } from '../../components';
 import * as service from '../../services/post';
+import ChatTemplate from './ChatTemplate';
 
 // 메인 페이지
 class PostContainer extends Component {
@@ -37,6 +38,9 @@ class PostContainer extends Component {
     return (
       <PostWrapper>
         <CardGroup data={post.data} dataNew={post.dataNew} />
+        <div>
+          <ChatTemplate/>
+        </div>
       </PostWrapper>
     );
   }
