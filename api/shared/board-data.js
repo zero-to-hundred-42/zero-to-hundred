@@ -2,27 +2,27 @@ const data = {
   boards: [
     {
       id: 10,
-      name: 'hello',
-      description: '블라블라',
-      quantity: "2021-08-13",
+      name: 'hekang',
+      description: '오늘 날씨가 좋네요.',
+      date: "2021-08-15",
     },
     {
       id: 20,
-      name: 'hi',
-      description: '블라블라',
-      quantity: "2021-08-13",
+      name: 'heom',
+      description: '코로나 얼른 사라졌으면 좋겠어요😢',
+      date: "2021-08-15",
     },
     {
       id: 30,
-      name: 'good-morning',
-      description: '블라블라',
-      quantity: "2021-08-13",
+      name: 'juepark',
+      description: '모두들 건강 조심하세요.',
+      date: "2021-08-15",
     },
     {
       id: 40,
-      name: 'nono',
-      description: '블라블라',
-      quantity: "2021-08-13",
+      name: 'yookim',
+      description: '좋은 하루 보내세요😃',
+      date: "2021-08-15",
     }
   ],
 };

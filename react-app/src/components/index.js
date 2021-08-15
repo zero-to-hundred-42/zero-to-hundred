@@ -18,6 +18,7 @@ import Header from './Header/Header';
 import Navigate from './Navigate/Naviagate';
 
 import Items from './Items/Items';
+import ListHeaderItem from './ListHeaderItem/ListHeaderItem';
 
 export {
   ButtonFooter,
@@ -35,5 +36,6 @@ export {
   CardThird,
   Header,
   Navigate,
-  Items
+  Items,
+  ListHeaderItem,
 }
