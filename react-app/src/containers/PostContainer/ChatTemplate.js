@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ex_data from "../db/data.json";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Card} from 'react-bootstrap';
-import { Input, Comment, Header } from 'semantic-ui-react'
+//import { Button, Card} from 'react-bootstrap';
+import {Button, Input, Comment, Header } from 'semantic-ui-react'
 
 /*
 ** ChatTemplate의 return 에서 MsgContent 태그에 들어갈 내용들 담는 컨포넌트 입니다.
@@ -77,8 +77,8 @@ console.log(uniqueArr);
 		num += 1;
 	},1500);
 	*/
-	
-	
+
+
 	/*
 	** tbody 안의 {loca_cont} 에 들어갈 태그들을 담는 함수입니다.
 	*/
@@ -127,7 +127,7 @@ console.log(uniqueArr);
 	*/
 
 	const onClick = (e) => {
-		/* 
+		/*
 		fetch(`http://localhost:3001/data?location_name=${e.currentTarget.value}`)
 		.then((first) => first.json())
 		.then((last) => {

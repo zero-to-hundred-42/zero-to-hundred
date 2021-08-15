@@ -7,7 +7,7 @@ const ModalYesNo = ({ message, onYes, onNo }) => (
   <div className="ui active dimmer">
     <div className="ui active modal">
       <div className="header">
-        <p className="modal-card-title">Confirm</p>
+        <p className="modal-card-title">확인</p>
       </div>
       <div className="description" style={{padding:"30px"}}>
           {message}
