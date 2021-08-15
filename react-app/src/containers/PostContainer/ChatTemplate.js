@@ -57,11 +57,9 @@ export default function ChatTemplate() {
 		const res = {"num": data.location_id, "name" : data.location_name}
 		return res;
 	});
-
 	const sort_arr = ret.sort(function(a, b) {
 		return a.num - b.num;
 	})
-
 	const arr_ret = sort_arr.filter((cur, inx) =>{
 		return sort_arr.findIndex((cur2, inx2) => {
 			if (cur2.num.includes(','))
@@ -69,13 +67,9 @@ export default function ChatTemplate() {
 			return cur.num === cur2.num;
 		}) === inx;
 	});
-
 	console.log("ret :");
 	console.log(arr_ret);
-
-
 	function send_Data(row) {
-
 		fetch(`http://localhost:3001/location`, {
 			method: "POST",
 			headers: {
@@ -217,4 +211,3 @@ export default function ChatTemplate() {
 		</div>
 	);
 }
-

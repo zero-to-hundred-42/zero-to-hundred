@@ -1,12 +1,12 @@
 import React from 'react';
 import './Items.css'
 
-const Items = ({children}) => {
+const Item = ({children}) => {
 	return (
-		<div className="Item">
+		<div className="Items">
 			{children}
 		</div>
 	);
 };
 
-export default Items;
+export default Item;
