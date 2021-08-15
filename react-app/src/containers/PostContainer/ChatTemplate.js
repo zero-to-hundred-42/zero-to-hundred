@@ -51,23 +51,45 @@ export default function ChatTemplate() {
 	]);
 
 	/*
-	location sort 해보려고 하는데 미완 하고 다시 푸쉬할게요
-var ret = ex_data.data.map( (data) => {
-	const res = {"num": data.location_id, "name" : data.location_name}
-	return res;
-});
+	location_id와 name을 data.json의 data에서 파싱해서 sort한 후 중복값을 제거해
+	data.json의 location파트에 넣어주는 부분입니다. 나중에 DB연결시 사용! 
+	var ret = ex_data.data.map( (data) => {
+		const res = {"num": data.location_id, "name" : data.location_name}
+		return res;
+	});
 
-const arr_ret = ret.sort(function(a, b) {
-	return a.num - b.num;
-})
+	const sort_arr = ret.sort(function(a, b) {
+		return a.num - b.num;
+	})
 
-const set = new Set(arr_ret);
-const uniqueArr = [...set];
+	const arr_ret = sort_arr.filter((cur, inx) =>{
+		return sort_arr.findIndex((cur2, inx2) => {
+			if (cur2.num.includes(','))
+				return -1;
+			return cur.num === cur2.num;
+		}) === inx;
+	});
 
-console.log("ret :");
-console.log(uniqueArr);
+	console.log("ret :");
+	console.log(arr_ret);
 
-*/
+
+	function send_Data(row) {
+
+		fetch(`http://localhost:3001/location`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(row),
+		}).then((res) => {
+			if (res.ok) {
+				console.log("send ok!");
+			}
+		});
+	}
+	send_Data(arr_ret);
+	*/
 
 	/*
 	Get_API 함수는 API정보를 땡겨서 db의 data.json에 정보를 넣어줌니다. 15초 단위로 setInterval 합니다
@@ -97,9 +119,9 @@ console.log(uniqueArr);
 				i++;
 				return (
 						<div key={value.num} className="d-grid gap-2">
-							<Button variant="outline-secondary" size="sm" onClick={onClick} value={value.name}>
+							<Button basic onClick={onClick} value={value.name} style={{width : "100%"}}>
 								{value.name}
-							</Button>{' '}
+							</Button>
 						</div>
 				)
 		});
@@ -111,9 +133,9 @@ console.log(uniqueArr);
 			(value) => {
 				return (
 					<div key={value.num} className="d-grid gap-2">
-						<Button variant="outline-secondary" size="sm" onClick={onClick} value={value.name}>
+						<Button basic onClick={onClick} value={value.name} style={{width : "100%"}}> 
 							{value.name}
-						</Button>{' '}
+						</Button>
 					</div>
 				)
 		});
