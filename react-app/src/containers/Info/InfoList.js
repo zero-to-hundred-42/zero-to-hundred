@@ -5,8 +5,8 @@ import "./info.css"
 function InfoItemTitle(props) {
 	return (
     <div>
-      <h3 className>{props.title}</h3>
-      <p className>{props.desc}</p>
+      <h3>{props.title}</h3>
+      <p>{props.desc}</p>
     </div>
   );
 }
