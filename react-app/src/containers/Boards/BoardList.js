@@ -26,31 +26,33 @@ function BoardList({
   }
 
   return (
-    <div>
+    <div className="ui centered cards">
       {boards.length === 0 && <div>Loading data ...</div>}
-      <div className="ui cards">
+      <div className="ui comments" style={{width: "90%"}}>
         {boards.map((board, index) => (
-          <div className="card" key={board.id} role="presentation">
+          <div style={{backgroundColor:"white", borderRadius:"10px", padding:"5px"}} className="comment" key={board.id} role="presentation">
             <div className="content">
-              <div className="description">{board.quantity}</div>
-              <div className="ui header">{board.name}</div>
-              <div className="description">{board.description}</div>
+              <span className="ui header author">{board.name}</span>
+              <div className="metadata">
+                <span className="date">{board.quantity}</span>
+              </div>
+              <div className="text">{board.description}</div>
             </div>
-            <div className="extra content">
+            <div className="extra content" style={{width:"50%"}}>
               <div className="ui two buttons">
                 <ButtonFooter
-                  className="ui basic red button"
-                  iconClasses="fas fa-trash"
-                  onClick={deleteBoard}
-                  label="Delete"
+                  className="ui grey basic button"
+                  iconClasses="fas fa-edit"
+                  onClick={selectBoard}
+                  label="Edit"
                   dataIndex={index}
                   dataId={board.id}
                 />
                 <ButtonFooter
-                  className="ui basic grey button"
-                  iconClasses="fas fa-edit"
-                  onClick={selectBoard}
-                  label="Edit"
+                  className="ui red basic button"
+                  iconClasses="fas fa-trash"
+                  onClick={deleteBoard}
+                  label="Delete"
                   dataIndex={index}
                   dataId={board.id}
                 />

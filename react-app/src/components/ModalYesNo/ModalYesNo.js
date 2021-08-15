@@ -9,10 +9,8 @@ const ModalYesNo = ({ message, onYes, onNo }) => (
       <div className="header">
         <p className="modal-card-title">Confirm</p>
       </div>
-      <div className="image content">
-        <div className="description">
-          <p>{message}</p>
-        </div>
+      <div className="description" style={{padding:"30px"}}>
+          {message}
       </div>
       <footer className="actions">
         <button className="ui black deny button" onClick={onNo}>

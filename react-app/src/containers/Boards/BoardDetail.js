@@ -66,7 +66,6 @@ function BoardDetail({
             placeholder="내용"
             onChange={handleDescriptionChange}
           />
-
           <footer className="card-footer ">
             <ButtonFooter
               className="ui basic red button"
