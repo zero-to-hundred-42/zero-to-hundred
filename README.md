@@ -4,13 +4,13 @@
 
 
 
-![](https://images.velog.io/images/zzp1318/post/341fb092-2c83-40d6-be1b-2e54522469ee/image.png)
+![](https://user-images.githubusercontent.com/49050588/129475702-224b88e7-515e-44db-b9d8-415c88461e71.png)
 
 * [HackaLearn Korea 2021](https://github.com/devrel-kr/HackaLearn) 참가 작품
 
 * Demo : https://proud-tree-02fdce210.azurestaticapps.net/
 
-* Team : zero-to-hundred-42　 | 　[강희영](https://github.com/hekang42)　[엄현준](https://github.com/Eomhyunjun)　[김윤아](https://github.com/Kyalivia)　[박주은](https://github.com/humonnom)
+* Team : zero-to-hundred-42(제로백)　 | 　[강희영](https://github.com/hekang42)　[엄현준](https://github.com/Eomhyunjun)　[김윤아](https://github.com/Kyalivia)　[박주은](https://github.com/humonnom)
 
 
 
@@ -44,9 +44,11 @@ git clone git@github.com:zero-to-hundred-42/zero-to-hundred.git
 cd zero-to-hundred
 ```
 
-애플리케이션 종속성 설치를 합니다.
+애플리케이션 종속성을 설치 및 웹앱을 실행합니다.
 ```
+cd react-app
 npm install
+npm start
 ```
 
 Azure Functions 앱을 로컬로 실행합니다.
@@ -55,12 +57,7 @@ cd api
 func start
 ```
 
-프런트 엔드 클라이언트 애플리케이션(웹앱) 실행합니다.
-```
-cd react-app
-`npm run start
-```
-
 ### license
 ***
+[Microsoft/mslearn-staticwebapp-api](https://github.com/MicrosoftDocs/mslearn-staticwebapp-api) 템플릿 기반
 MIT License
