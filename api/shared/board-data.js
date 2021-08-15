@@ -21,7 +21,7 @@ const data = {
     {
       id: 40,
       name: 'yookim',
-      description: '좋은 하루 보네세요😃',
+      description: '좋은 하루 보내세요😃',
       date: "2021-08-15",
     }
   ],

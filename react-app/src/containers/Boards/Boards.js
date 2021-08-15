@@ -112,7 +112,7 @@ function Boards({ history }) {
 
         {showModal && (
           <ModalYesNo
-            message={`${boardToDelete.name}을(를) 삭제할까요?`}
+            message={`${boardToDelete.name}님의 방명록을 삭제할까요?`}
             onNo={handleCloseModal}
             onYes={handleDeleteFromModal}
           />

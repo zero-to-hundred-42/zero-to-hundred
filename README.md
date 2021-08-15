@@ -1,4 +1,4 @@
-코로나 OUT 
+코로나 OUT
 =============
 ***
 
@@ -15,9 +15,9 @@
 
 
 <br>
-아이폰에서는 재난문자가 저장이 안돼, 평소에 불편함이 있어왔습니다.<br> 이에 문제의식을 가지고 지역별로 재난문자를 확인 할 수 있는 사이트가 있으면 좋겠다는 생각에 만들게 되었습니다.   
+아이폰에서는 재난문자가 저장이 안돼, 평소에 불편함이 있어왔습니다.<br> 이에 문제의식을 가지고 지역별로 재난문자를 확인 할 수 있는 사이트가 있으면 좋겠다는 생각에 만들게 되었습니다.
 <br>
-<br>   
+<br>
 또한 같은 고충을 겪는 사람들끼리 소통할 수 있는 조그마한 창구가 있으면 더 좋지 않을까 하는 생각에 간단한 방명록도 만들었습니다.
 
 
@@ -27,7 +27,7 @@
 * Azure Static Web Apps
 * Azure function
 * React, JSX
-* HTML, CSS, JS   
+* HTML, CSS, JS
 
 <br>
 
@@ -60,4 +60,5 @@ func start
 ### license
 ***
 [Microsoft/mslearn-staticwebapp-api](https://github.com/MicrosoftDocs/mslearn-staticwebapp-api) 템플릿 기반
+<br>
 MIT License
