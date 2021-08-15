@@ -1,0 +1,51 @@
+/*general*/
+.Navigate {
+    /* position: relative; */
+    display:block;
+    float: left;
+    margin-left: 5%;
+    margin-top: 3%;
+    flex-direction: row;
+}
+.active-item {
+    border-color: rgb(50,120,205);
+}
+.ui.button.Navigate-right-button {
+    float: right;
+    margin: 0px;
+}
+.navbar_toggleBtn{
+    display: none;
+}
+
+/*화면 너비가 768px 이하일 때*/
+@media screen and (max-width:768px) {
+    .Navigate.active{
+        align-items: flex-start;
+        width: 100%;
+        display: flex;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .Navigate{
+        display: none;
+        transition: 850ms;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0px;
+        text-align: center;
+        display: flex;
+    }
+    .ui.vertical.menu{
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display:block;
+        text-align: right;
+        position: absolute;
+        right: 13px;
+        top: 60px;
+    }
+}

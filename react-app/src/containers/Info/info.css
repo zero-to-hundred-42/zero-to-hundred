@@ -1,0 +1,10 @@
+.info-items {
+	background-color: white;
+}
+
+.info {
+	margin: 30px 50px;
+    margin-top: 3%;
+	border-radius: 5px;
+	padding: 1rem;
+}

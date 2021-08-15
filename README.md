@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+코로나 OUT 
+=============
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![](https://images.velog.io/images/zzp1318/post/341fb092-2c83-40d6-be1b-2e54522469ee/image.png)
 
-### `npm start`
+* [HackaLearn Korea 2021](https://github.com/devrel-kr/HackaLearn) 참가 작품
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Demo : https://proud-tree-02fdce210.azurestaticapps.net/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Team : zero-to-hundred-42　 | 　[강희영](https://github.com/hekang42)　[엄현준](https://github.com/Eomhyunjun)　[김윤아](https://github.com/Kyalivia)　[박주은](https://github.com/humonnom)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<br>
+아이폰에서는 재난문자가 저장이 안돼, 평소에 불편함이 있어왔습니다.<br> 이에 문제의식을 가지고 지역별로 재난문자를 확인 할 수 있는 사이트가 있으면 좋겠다는 생각에 만들게 되었습니다.   
+<br>
+<br>   
+또한 같은 고충을 겪는 사람들끼리 소통할 수 있는 조그마한 창구가 있으면 더 좋지 않을까 하는 생각에 간단한 방명록도 만들었습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack
+***
+* Azure Static Web Apps
+* Azure function
+* React, JSX
+* HTML, CSS, JS   
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build & Run
+***
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`git clone`으로 저장소를 받아옵니다.
+```
+git clone git@github.com:zero-to-hundred-42/zero-to-hundred.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+저장소가 저장된 폴더로 이동합니다.
+```
+cd zero-to-hundred
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+애플리케이션 종속성 설치를 합니다.
+```
+npm install
+```
 
-## Learn More
+Azure Functions 앱을 로컬로 실행합니다.
+```
+cd api
+func start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+프런트 엔드 클라이언트 애플리케이션(웹앱) 실행합니다.
+```
+cd react-app
+`npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### license
+***
+MIT License

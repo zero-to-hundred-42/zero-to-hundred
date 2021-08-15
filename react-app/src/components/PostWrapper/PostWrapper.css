@@ -1,0 +1,11 @@
+.PostWrapper {
+    width: 60rem;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+@media (max-width: 768px) {
+    .PostWrapper {
+        width: 90%;
+    }
+}
