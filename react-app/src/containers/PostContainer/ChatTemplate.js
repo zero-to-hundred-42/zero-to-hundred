@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ex_data from "../db/data.json";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
-//import { Button, Card} from 'react-bootstrap';
 import {Button, Input, Comment, Header } from 'semantic-ui-react'
 
 /*
@@ -45,14 +43,14 @@ export default function ChatTemplate() {
 			"location_id": "",
 			"location_name": "",
 			"md101_sn": "",
-			"msg": "왼쪽 검색창에 다음과 같이 입력하세요 ex) [서울 전체] or [서울 금천구]",
+			"msg": "왼쪽 검색창에 다음과 같이 입력하세요 ex) [서울특별시 전체] or [서울특별시 금천구]",
 			"send_platform": ""
 		}
 	]);
 
 	/*
 	location_id와 name을 data.json의 data에서 파싱해서 sort한 후 중복값을 제거해
-	data.json의 location파트에 넣어주는 부분입니다. 나중에 DB연결시 사용! 
+	data.json의 location파트에 넣어주는 부분입니다. 나중에 DB연결시 사용!
 	var ret = ex_data.data.map( (data) => {
 		const res = {"num": data.location_id, "name" : data.location_name}
 		return res;
@@ -127,7 +125,7 @@ export default function ChatTemplate() {
 			(value) => {
 				return (
 					<div key={value.num} className="d-grid gap-2">
-						<Button basic onClick={onClick} value={value.name} style={{width : "100%"}}> 
+						<Button basic onClick={onClick} value={value.name} style={{width : "100%"}}>
 							{value.name}
 						</Button>
 					</div>
