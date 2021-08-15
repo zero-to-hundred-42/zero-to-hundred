@@ -30,8 +30,8 @@ function BoardDetail({
     setBoard({ ...board, description: e.target.value });
   }
 
-  function handleQuantityChange(e) {
-    setBoard({ ...board, quantity: e.target.value });
+  function handledateChange(e) {
+    setBoard({ ...board, date: e.target.value });
   }
 
   return (
@@ -43,15 +43,15 @@ function BoardDetail({
         </div>
         <div className="ui form">
           <div className="field">
-            <label className="label" htmlFor="quantity">
+            <label className="label" htmlFor="date">
               작성 날짜
             </label>
             <input
-              name="quantity"
+              name="date"
               className="input"
               type="date"
-              defaultValue={board.quantity}
-              onChange={handleQuantityChange}
+              defaultValue={board.date}
+              onChange={handledateChange}
             />
           </div>
           <InputDetail
@@ -66,18 +66,18 @@ function BoardDetail({
             placeholder="내용"
             onChange={handleDescriptionChange}
           />
-          <footer className="card-footer ">
+          <footer className="card-footer" style={{display:'flex', justifyContent:'flex-end'}}>
             <ButtonFooter
-              className="ui basic red button"
+              className="ui red button"
               iconClasses="fas fa-undo"
               onClick={handleCancelBoard}
-              label="Cancel"
+              label="취소"
             />
             <ButtonFooter
-              className="ui basic blue button"
+              className="ui blue button"
               iconClasses="fas fa-save"
               onClick={handleSave}
-              label="Save"
+              label="저장"
             />
           </footer>
         </div>

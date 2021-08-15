@@ -1,14 +1,25 @@
 import React from 'react';
+import Modal from '../../components/Modal/Modal';
+import { Link } from 'react-router-dom';
 
 // 유효하지 않은 페이지
 const NotFound = () => (
-  <div className="content-container">
-    <div className="content-title-group not-found">
-      <i className="fas fa-exclamation-triangle" aria-hidden="true" />
-      &nbsp;
-      <span className="title">{`These aren't the bits you're looking for`}</span>
+  <Modal className="ui segment">
+    <div className="ui active dimmer">
+      <div className="ui active modal">
+        <div className="header">
+          <p className="modal-card-title">유효하지 않은 페이지입니다.</p>
+        </div>
+        <footer className="actions">
+          <button className="ui red button">
+            <Link to="/" style={{color:"white"}}>
+              취소
+            </Link>
+          </button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </Modal>
 );
 
 export default NotFound;

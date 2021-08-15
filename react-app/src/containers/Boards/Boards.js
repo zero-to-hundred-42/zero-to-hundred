@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { ListHeader, ModalYesNo } from '../../components';
+import { ListHeader, ModalYesNo, PostWrapper, Items, ListHeaderItem } from '../../components';
 import BoardDetail from './BoardDetail';
 import BoardList from './BoardList';
 import useBoards from './useBoards';
-
-import './boards.css';
 
 const captains = console;
 
@@ -75,8 +73,8 @@ function Boards({ history }) {
   }
 
   return (
-    <div className="one">
-      <div className="ui container">
+    <PostWrapper>
+      <ListHeaderItem>
         <ListHeader
           title="방명록"
           handleAdd={addNewBoard}
@@ -84,8 +82,6 @@ function Boards({ history }) {
           routePath="/boards"
         />
         <br></br>
-        <div className="columns is-multiline is-variable">
-          <div className="column is-8">
             <Switch>
               <Route
                 exact
@@ -113,18 +109,16 @@ function Boards({ history }) {
                 }}
               />
             </Switch>
-          </div>
-        </div>
 
         {showModal && (
           <ModalYesNo
-            message={`${boardToDelete.name}를 삭제할까요?`}
+            message={`${boardToDelete.name}을(를) 삭제할까요?`}
             onNo={handleCloseModal}
             onYes={handleDeleteFromModal}
           />
         )}
-      </div>
-    </div>
+      </ListHeaderItem>
+    </PostWrapper>
   );
 }
 

@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 
 function Navigate({ location, history }) {
   let home = 'item';
-  let about = 'item';
   let info = 'item';
   let board = 'item';
 
   if (location.pathname === '/') {
     home = 'active blue item';
-  } else if (location.pathname === '/about') {
-    about = 'active blue item';
   } else if (location.pathname === '/info') {
     info = 'active blue item';
   } else if (location.pathname === '/products') {
@@ -33,11 +30,6 @@ function Navigate({ location, history }) {
           <Link to="/">
             <a className={home} href="#!">
               코로나OUT
-            </a>
-          </Link>
-          <Link to="/about">
-            <a className={about} href="#!">
-              소개
             </a>
           </Link>
           <Link to="/info">

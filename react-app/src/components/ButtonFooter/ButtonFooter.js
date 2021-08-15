@@ -17,7 +17,6 @@ const ButtonFooter = ({
       data-index={dataIndex}
       data-id={dataId}
     >
-      <i className={iconClasses} />
       <span>{label}</span>
     </button>
   );
