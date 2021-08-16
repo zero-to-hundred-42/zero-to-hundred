@@ -69,7 +69,7 @@ npm install
 npm start
 ```
 
-3. 웹앱 실행과 동시에 Azure Functions 앱을 로컬로 실행합니다.
+3. 웹앱 실행과 동시에 api 폴더에서 Azure Functions 앱을 로컬로 실행합니다.
 
 ```bash
 cd api
